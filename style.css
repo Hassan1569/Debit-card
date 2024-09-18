@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "ocr extended";
+    src: url(../fonts/OCRAEXT.TTF);
+}
+
+.container {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credit_card {
+    width: 500px;
+    height: 300px;
+    color: #fff;
+    cursor: pointer;
+    perspective: 1000px;
+    font-family: 'Mulish', sans-serif;
+}
+
+.credit_card_inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+}
+
+.credit_card .front,
+.credit_card .back {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, #001b4d 0%, #2d5de2 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 30px;
+    border-radius: 30px;
+    border-top: 1px solid #eeeded70;
+    border-left: 1px solid #eeeded70;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    backface-visibility: hidden;
+    z-index: 1;
+}
+
+.credit_card .front .bankTitle {
+    font-size: 1.7em;
+    text-align: end;
+    margin-bottom: 30px;
+}
+
+.credit_card .back {
+    transform: rotateY(180deg);
+}
+
+.credit_card:hover .credit_card_inner {
+    transform: rotateY(-180deg);
+}
+
+.credit_card .mapImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.credit_card .madImg {
+    width: 60px;
+    margin-bottom: 25px;
+}
+
+.credit_card .chipImg {
+    width: 50px;
+}
+
+.credit_card .signalImg {
+    width: 50px;
+}
+
+.credit_card .visaImg {
+    width: 80px;
+}
+
+.credit_card .number {
+    font-size: 2.2em;
+    font-family: "ocr extended";
+    margin-top: 20px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.credit_card .card_holder {
+    font-size: 14px;
+    font-family: cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.credit_card .card_holder span {
+    font-size: 10px;
+    font-weight: 400;
+    font-family: 'Mulish', sans-serif;
+}
+
+.credit_card .card_valid {
+    font-family: "ocr extended";
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-right: 50px;
+}
+
+.credit_card .card_valid span {
+    font-family: 'Mulish', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.credit_card .grpupOne {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.credit_card .group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.credit_card .barstrip {
+    background-color: #222;
+    margin-left: -30px;
+    margin-right: -30px;
+    height: 60px;
+    margin-top: 10px;
+}
+
+.credit_card .card_ccv {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.credit_card .card_ccv div {
+    flex: 1;
+}
+
+.credit_card .patternImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.credit_card .card_ccv span {
+    font-family: "ocr extended";
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px 15px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: -3px;
+    color: #222;
+    border-radius: 0 5px 5px 0;
+}
+
+.credit_card .card_desc {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.credit_card .signature {
+    text-transform: uppercase;
+}
+
+.credit_card .direction {
+    font-size: 1.3em;
+}
+
+.credit_card .direction span {
+    margin-right: -8px;
+}
+
+.credit_card .visaImgTwo {
+    margin-top: -5px;
+    width: 70px;
+}
